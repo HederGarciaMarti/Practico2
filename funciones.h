@@ -10,6 +10,8 @@ struct compu {
 }typedef compu;
 
 void cargarComputadora(compu *computadoras, int cantidad);
+void listarPCs(compu pcs[], int cantidad);
+
 
 void cargarComputadora(compu *commputadoras, int cantidad){
     int aletorio = 0;
@@ -20,6 +22,16 @@ void cargarComputadora(compu *commputadoras, int cantidad){
         commputadoras[i].cantidad_nucleos = 1 + rand()% 8;
         aletorio = rand()% 6;
         commputadoras[i].tipo_cpu = tipos[aletorio];
+    }
+}
+void listarPCs(compu pcs[], int cantidad){
+    for (int i = 0; i < cantidad; i++)
+    {
+        printf("Computadora numero %d: \n", i + 1);
+        printf("\t-Velocidad: %d\n", pcs[i].velocidad);
+        printf("\t-Anio: %d\n", pcs[i].anio);
+        printf("\t-Cantidad de nucleos: %d\n", pcs[i].cantidad_nucleos);
+        printf("\t-Tipo de cpu: %d\n", pcs[i].tipo_cpu);
     }
     
 }
