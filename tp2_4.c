@@ -8,4 +8,5 @@ int main (){
     listarPCs(computadoras, 5);
     mostrarMasVieja(computadoras, 5);
     mostrarMasVeloz(computadoras, 5);
+    return 0;
 }
