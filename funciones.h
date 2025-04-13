@@ -11,7 +11,8 @@ struct compu {
 
 void cargarComputadora(compu *computadoras, int cantidad);
 void listarPCs(compu pcs[], int cantidad);
-void mostrarMasVieja(struct compu pcs[], int cantidad);
+void mostrarMasVieja(compu pcs[], int cantidad);
+void mostrarMasVeloz(compu pcs[], int cantidad);
 
 
 void cargarComputadora(compu *commputadoras, int cantidad){
@@ -48,6 +49,21 @@ void mostrarMasVieja(compu pcs[], int cantidad){
     }
     printf("La computadora mas vieja es del anio: %d\n", pcs[valor].anio);
     printf("-Velocidad: %d\n", pcs[valor].velocidad);
+    printf("-Cantidad de nucleos: %d\n", pcs[valor].cantidad_nucleos);
+    printf("-Tipo de cpu: %d\n", pcs[valor].tipo_cpu);
+}
+void mostrarMasVeloz(compu pcs[], int cantidad){
+    int veloz = 0, valor = 0;
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].velocidad > valor)
+        {
+            valor = pcs[i].velocidad;
+            valor = i;
+        }
+    }
+    printf("La mas veloz tiene de velocidad: %d\n", pcs[valor].velocidad);
+    printf("-Anio: %d\n", pcs[valor].anio);
     printf("-Cantidad de nucleos: %d\n", pcs[valor].cantidad_nucleos);
     printf("-Tipo de cpu: %d\n", pcs[valor].tipo_cpu);
 }
