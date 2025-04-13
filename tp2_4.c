@@ -7,4 +7,5 @@ int main (){
     cargarComputadora(computadoras, 5);
     listarPCs(computadoras, 5);
     mostrarMasVieja(computadoras, 5);
+    mostrarMasVeloz(computadoras, 5);
 }
