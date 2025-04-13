@@ -11,6 +11,7 @@ struct compu {
 
 void cargarComputadora(compu *computadoras, int cantidad);
 void listarPCs(compu pcs[], int cantidad);
+void mostrarMasVieja(struct compu pcs[], int cantidad);
 
 
 void cargarComputadora(compu *commputadoras, int cantidad){
@@ -34,4 +35,19 @@ void listarPCs(compu pcs[], int cantidad){
         printf("\t-Tipo de cpu: %d\n", pcs[i].tipo_cpu);
     }
     
+}
+void mostrarMasVieja(compu pcs[], int cantidad){
+    int mas_vieja = 9999, valor = 0;
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].anio < mas_vieja);
+        {
+            mas_vieja = pcs[i].anio;
+            valor = i;
+        }
+    }
+    printf("La computadora mas vieja es del anio: %d\n", pcs[valor].anio);
+    printf("-Velocidad: %d\n", pcs[valor].velocidad);
+    printf("-Cantidad de nucleos: %d\n", pcs[valor].cantidad_nucleos);
+    printf("-Tipo de cpu: %d\n", pcs[valor].tipo_cpu);
 }
